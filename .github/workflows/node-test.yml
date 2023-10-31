@@ -1,0 +1,7 @@
+name: lint test compile
+
+on: push
+
+jobs:
+  node-lint-test-compile:
+    uses: fluidware-team/.github/.github/workflows/node-test.yml@v1

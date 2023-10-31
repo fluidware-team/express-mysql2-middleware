@@ -1,0 +1,58 @@
+{
+  "name": "@fluidware-it/express-mysql2-middleware",
+  "version": "0.0.0",
+  "main": "build/src/index.js",
+  "module": "build/esm/index.js",
+  "esnext": "build/esnext/index.js",
+  "types": "build/src/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Fluidware srl",
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepack": "npm run compile",
+    "compile": "npm run clean && tsc --build tsconfig.json tsconfig.esm.json tsconfig.esnext.json",
+    "clean": "tsc --build --clean tsconfig.json tsconfig.esm.json tsconfig.esnext.json",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "test": "jest tests"
+  },
+  "engines": {
+    "node": ">=18.4"
+  },
+  "dependencies": {
+    "@fluidware-it/mysql2-client": "^0.1.0",
+    "@fluidware-it/saddlebag": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/jest": "^29.5.6",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "files": [
+    "build/esm/**/*.js",
+    "build/esm/**/*.js.map",
+    "build/esm/**/*.d.ts",
+    "build/esnext/**/*.js",
+    "build/esnext/**/*.js.map",
+    "build/esnext/**/*.d.ts",
+    "build/src/**/*.js",
+    "build/src/**/*.js.map",
+    "build/src/**/*.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@opentelemetry/api": "*"
+  }
+}

@@ -1,0 +1,12 @@
+name: publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  node-publish:
+    uses: fluidware-team/.github/.github/workflows/node-publish.yml@v1
+    secrets:
+      npm_token: ${{ secrets.NPM_TOKEN }}
