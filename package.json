@@ -21,11 +21,9 @@
   "engines": {
     "node": ">=18.4"
   },
-  "dependencies": {
-    "@fluidware-it/mysql2-client": "^0.1.0",
-    "@fluidware-it/saddlebag": "^0.1.1"
-  },
   "devDependencies": {
+    "@fluidware-it/mysql2-client": "*",
+    "@fluidware-it/saddlebag": "*",
     "@types/express": "^4.17.20",
     "@types/jest": "^29.5.6",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
@@ -53,6 +51,8 @@
     "README.md"
   ],
   "peerDependencies": {
+    "@fluidware-it/mysql2-client": "*",
+    "@fluidware-it/saddlebag": "*",
     "@opentelemetry/api": "*"
   }
 }
