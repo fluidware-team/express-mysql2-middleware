@@ -1,6 +1,6 @@
 {
   "name": "@fluidware-it/express-mysql2-middleware",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "build/src/index.js",
   "module": "build/esm/index.js",
   "esnext": "build/esnext/index.js",
